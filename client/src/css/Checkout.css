@@ -1,0 +1,76 @@
+.checkout {
+  background-image: url("https://images.unsplash.com/photo-1559825481-12a05cc00344?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D");
+  height: 100%;
+}
+.checkout main {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.checkout main section {
+  padding: 1rem;
+  background-color: #006B3E;
+  box-shadow: rgb(51, 51, 51) 5px 0px 15px, rgb(51, 51, 51) -5px 0px 15px;
+}
+.checkout main h2 {
+  text-align: center;
+}
+.checkout main form {
+  display: flex;
+  flex-direction: column;
+}
+.checkout main form div {
+  margin: 1rem;
+}
+.checkout main form div input {
+  width: 100%;
+  font-size: 1.3rem;
+}
+.checkout main form button {
+  margin: auto;
+  font-size: 1.5rem;
+}
+.checkout main aside {
+  width: 15rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #006B3E;
+  color: white;
+  padding: 1rem;
+  font-size: 1.3rem;
+  box-shadow: rgb(51, 51, 51) 5px 0px 15px, rgb(51, 51, 51) -5px 0px 15px;
+}
+.checkout main aside #cart-items {
+  max-height: 40vh;
+  overflow: scroll;
+}
+.checkout main aside #cart-items details {
+  display: flex;
+  border: 1px solid white;
+}
+.checkout main aside #cart-items details summary {
+  font-size: 1.3rem;
+  border: 1px solid white;
+}
+.checkout main aside #cart-items details img {
+  width: 13rem;
+  height: 13rem;
+  margin: auto;
+}
+.checkout main aside #cart-items details div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkout main aside #cart-items details div p, .checkout main aside #cart-items details div button {
+  font-size: 1.2rem;
+}
+@media (max-width: 707px) {
+  .checkout main {
+    flex-direction: column-reverse;
+  }
+  .checkout main aside {
+    align-self: center;
+    width: 90%;
+  }
+}/*# sourceMappingURL=Checkout.css.map */

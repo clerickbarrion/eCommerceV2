@@ -1,0 +1,154 @@
+.contact{
+    background-image: url('https://images.unsplash.com/photo-1559825481-12a05cc00344?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D');
+    form {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        background-color: #006B3E;
+        color: white;
+        padding: 15px;
+        fieldset {
+            color:white;
+            display:flex;
+            flex-direction: column;
+            legend {
+                font-size: 1.4rem;
+            }
+            #error-msg {
+                color:red;
+                text-shadow: none;
+                font-size: 2rem;
+            }
+            figure {
+                width: 15rem;
+                height: 10rem;
+                margin:auto;
+            }
+            div {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin: 5px;
+            }
+            .form-group {
+                display: flex;
+                flex-direction: row;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+                }
+            }
+        }
+    }
+    
+    label {
+        text-align: left;
+        font-size: 1.3rem;
+    }
+    
+    #slider-container {
+        display:flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    #slider-container > * {
+        margin: 0;
+    }
+    
+    #slider {
+        width:70%;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        background-color: rgb(220, 255, 220);
+    }
+    input:focus:invalid {
+        background-color: rgb(255, 232, 233);
+    }
+    
+    button[type='submit'], button[type='reset'] {
+        width: fit-content;
+        margin: auto;
+        font-size: 1.3rem;
+    }
+    
+    details {
+        width: 50%;
+        margin: auto;
+        background-color: lavender;
+        border: 1px solid black;
+        padding: 15px;
+    
+    }
+    
+    summary {
+        font-size: 1.5rem;
+    }
+    
+    #comment-submission-container {
+        margin: 4px auto;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .comment-section, section {
+        width:100%;
+    }
+    
+    
+    .name, .time {
+        margin: 0 auto;
+    }
+    
+    .comment {
+        border: 1px solid black;
+        background-color: lightblue;
+        width: 100%;
+        margin: 5px auto;
+    }
+    
+    #response {
+        background-color: white;
+        margin:auto;
+        font-size:32px;
+        padding: 10%;
+        text-align: center;
+        color: rgb(0,80,107)
+    }
+    @media (max-width: 800px) {
+        main {
+            margin: 15px 0;
+        }
+        form {
+            width: 100%;
+            padding: 0;
+        }
+        details {
+            margin: 0;
+            width: 100%;
+            padding: 0;
+        }
+    }
+    
+    @media (max-width: 751px) {
+        .form-group {
+            flex-direction: column;
+        }
+        .form-group div {
+            width: 100%;
+            margin: 5px 0;
+        }
+    }
+    
+    @media (max-width: 461px) {
+        #response {
+            display:flex;
+            align-items: center;
+            height: 100%;
+        }
+    }
+}

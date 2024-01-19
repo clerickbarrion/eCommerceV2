@@ -1,0 +1,118 @@
+.products {
+  background-image: url("https://images.unsplash.com/photo-1559825481-12a05cc00344?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D") !important;
+  background-position: center;
+  background-size: cover;
+  background-color: lavender;
+  margin-top: -2.3rem;
+}
+.products .sticky-container {
+  top: 5rem;
+  position: sticky;
+}
+.products aside {
+  display: flex;
+  width: 20rem;
+  position: absolute;
+}
+.products .cart {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  right: 15.3rem;
+  width: 100%;
+}
+.products .cart-items {
+  background-color: lightblue;
+  text-align: center;
+  width: 100%;
+  max-height: 500px;
+  overflow: scroll;
+  border: solid 2px black;
+  font-size: 1.3rem;
+}
+.products .items > p:hover {
+  color: red;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+.products aside button {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 2rem;
+}
+.products #title {
+  text-align: center;
+}
+.products main {
+  display: flex;
+  flex-direction: column;
+  max-width: none;
+  margin: initial;
+}
+.products main #filter-container {
+  align-self: flex-end;
+  color: lavender;
+  text-shadow: 2px 2px black;
+  margin-right: 1rem;
+}
+.products main #filter-container div {
+  display: flex;
+}
+.products main #filter-container label, .products main #filter-container select, .products main #filter-container input {
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: 13rem;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.products article {
+  width: 100%;
+  text-align: center;
+}
+.products section {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.products h1 {
+  color: lavender;
+  text-shadow: 2px 2px black;
+}
+.products .product {
+  margin: 10px 5px;
+}
+.products section div {
+  background-color: lavender;
+  box-shadow: 5px 5px #1167b1;
+  width: 300px;
+  cursor: pointer;
+}
+.products section div:active {
+  background-image: none;
+  background-color: lightgreen;
+}
+.products div figure img {
+  height: 15rem;
+}
+.products figure p:nth-child(1) {
+  font-size: 2rem;
+}
+.products p {
+  margin: auto 5px;
+}
+@media (max-width: 800px) {
+  .products .product {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 442px) {
+  .products main #filter-container {
+    align-self: center;
+  }
+  .products main #filter-container div {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=Products.css.map */

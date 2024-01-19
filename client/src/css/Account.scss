@@ -1,0 +1,37 @@
+.account {
+    main {
+        #logout{
+            float:right;
+            font-size: 2rem;
+            padding: 0.6rem;
+            background-color: #006B3E;
+        }
+        background-color: rgb(0, 87, 107);
+        padding: 1rem;
+        #order-items{
+            max-height: 70vh;
+            overflow: scroll;
+        }
+        details{
+            color: white;
+            padding: 1rem;
+            border: 1px solid black;
+            font-size: 1.3rem;
+            .figure-container{
+                display:flex;
+                overflow:scroll;
+                figure{
+                    width:fit-content;
+                    figcaption{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    img{
+                        width: 15rem;
+                        height: 15rem;
+                    }
+                }
+            }
+        }
+    }
+}

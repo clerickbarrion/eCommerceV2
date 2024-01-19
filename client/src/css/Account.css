@@ -1,0 +1,36 @@
+.account main {
+  background-color: rgb(0, 87, 107);
+  padding: 1rem;
+}
+.account main #logout {
+  float: right;
+  font-size: 2rem;
+  padding: 0.6rem;
+  background-color: #006B3E;
+}
+.account main #order-items {
+  max-height: 70vh;
+  overflow: scroll;
+}
+.account main details {
+  color: white;
+  padding: 1rem;
+  border: 1px solid black;
+  font-size: 1.3rem;
+}
+.account main details .figure-container {
+  display: flex;
+  overflow: scroll;
+}
+.account main details .figure-container figure {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.account main details .figure-container figure figcaption {
+  display: flex;
+  justify-content: space-between;
+}
+.account main details .figure-container figure img {
+  width: 15rem;
+  height: 15rem;
+}/*# sourceMappingURL=Account.css.map */
