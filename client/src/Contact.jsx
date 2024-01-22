@@ -17,6 +17,7 @@ function Form(){
             if (!firstName.value && !lastName.value && !email.value) errorMsg.textContent = 'Enter all required fields'
             else if (!email.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) errorMsg.textContent = "Enter a valid email"
             else if (!phone.value.match(/^(1-)?\d{3}-\d{3}-\d{4}$/)) errorMsg.textContent = 'Enter phone number in the valid format'
+            else { errorMsg.textContent = `Thank you for your feedback ${firstName.value}` }
         }
     }
 
