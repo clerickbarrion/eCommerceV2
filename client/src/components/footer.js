@@ -7,9 +7,9 @@ export default function footer() {
         <ul>
             <li>Social Media</li>
             <hr/>
-            <li><a><img src={require("../images/youtube.png")} alt="youtube"/></a></li>
-            <li><a><img src={require("../images/linkedin.png")} alt="linkedin"/></a></li>
-            <li><a><img src={require("../images/twitter.png")} alt="twitter"/></a></li>
+            <li><a href='https://youtube.com'><img src={require("../images/youtube.png")} alt="youtube"/></a></li>
+            <li><a href='https://linkedin.com'><img src={require("../images/linkedin.png")} alt="linkedin"/></a></li>
+            <li><a href='https://twitter.com'><img src={require("../images/twitter.png")} alt="twitter"/></a></li>
         </ul>
         <ul>
             <li>Contact Information</li>

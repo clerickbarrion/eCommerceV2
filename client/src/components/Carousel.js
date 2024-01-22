@@ -22,18 +22,18 @@ export default function Carousel(){
     scrollLeft()
     return (
         <section className="carousel" ref={sectionRef}>
-            <figure className="carousel-item"><img src={require("../images/betta.avif")} alt="betta"/></figure>
-            <figure className="carousel-item"><img src={require("../images/goldfish.avif")} alt="goldfish"/></figure>
+            <figure className="carousel-item"><img src={require("../images/betta.png")} alt="betta"/></figure>
+            <figure className="carousel-item"><img src={require("../images/goldfish.png")} alt="goldfish"/></figure>
             <figure className="carousel-item"><img src={require("../images/tetra.png")} alt="tetra"/></figure>
-            <figure className="carousel-item"><img src={require("../images/guppy.jpeg")} alt="guppy"/></figure>
-            <figure className="carousel-item"><img src={require("../images/clownfish.webp")} alt="clownfish"/></figure>
-            <figure className="carousel-item"><img src={require("../images/bluetang.webp")} alt="bluetang"/></figure>
-            <figure className="carousel-item"><img src={require("../images/mandarinfish.jpeg")} alt="mandarinfish"/></figure>
-            <figure className="carousel-item"><img src={require("../images/angelfish.avif")} alt="angelfish"/></figure>
-            <figure className="carousel-item"><img src={require("../images/mantisshrimp.webp")} alt="mantis shrimp"/></figure>
-            <figure className="carousel-item"><img src={require("../images/arowana.avif")} alt="arowana"/></figure>
-            <figure className="carousel-item"><img src={require("../images/discusfish.jpeg")} alt="discus fish"/></figure>
-            <figure className="carousel-item"><img src={require("../images/puffer.jpeg")} alt="puffer"/></figure>
+            <figure className="carousel-item"><img src={require("../images/guppy.png")} alt="guppy"/></figure>
+            <figure className="carousel-item"><img src={require("../images/clownfish.png")} alt="clownfish"/></figure>
+            <figure className="carousel-item"><img src={require("../images/bluetang.png")} alt="bluetang"/></figure>
+            <figure className="carousel-item"><img src={require("../images/mandarinfish.png")} alt="mandarinfish"/></figure>
+            <figure className="carousel-item"><img src={require("../images/angelfish.png")} alt="angelfish"/></figure>
+            <figure className="carousel-item"><img src={require("../images/mantisshrimp.png")} alt="mantis shrimp"/></figure>
+            <figure className="carousel-item"><img src={require("../images/arowana.png")} alt="arowana"/></figure>
+            <figure className="carousel-item"><img src={require("../images/discusfish.png")} alt="discus fish"/></figure>
+            <figure className="carousel-item"><img src={require("../images/puffer.png")} alt="puffer"/></figure>
         </section>
     )
 }

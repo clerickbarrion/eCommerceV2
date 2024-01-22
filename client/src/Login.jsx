@@ -96,14 +96,14 @@ export default function Login() {
             <div id="login-section">
                 <input placeholder="Username" id="login-username"/>
                 <input placeholder="Password" id="login-password" type="password"/>
-                <details>
+                {/* <details>
                 <summary><small>Forgot password?</small></summary>
                 <input placeholder="Username" id="forgot-username"/>
                 <input placeholder="Phone Number" id="login-number"/>
                 <input placeholder="New password: min 6 chars" id="new-password" type="password"/>
                 <input placeholder="Confirm password" id="confirm-new-password" type="password"/>
                 <input type="button" value="Reset password" id="reset-password" />
-                </details>
+                </details> */}
                 <button onClick={login}>Login</button>
                 <p>Create an account <mark onClick={signSwitch}>Sign up now</mark></p>
             </div>

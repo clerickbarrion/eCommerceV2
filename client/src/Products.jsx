@@ -100,8 +100,8 @@ export default function Products() {
     const [highest, setHighest] = useState(100)
 
     function changeType(e){setType(e.target.value)}
-    function changeLowest(e){setLowest(e.target.value)}
-    function changeHighest(e){setHighest(e.target.value)}
+    function changeLowest(e){if(e.target.value) setLowest(e.target.value)}
+    function changeHighest(e){if(e.target.value)setHighest(e.target.value)}
 
     function RenderFilter(){
         switch (type){

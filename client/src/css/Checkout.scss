@@ -13,6 +13,14 @@
         h2 {
             text-align: center;
         }
+        #error-msg{
+            color:red;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        small {
+            color: white;
+        }
         form {
             display: flex;
             flex-direction: column;

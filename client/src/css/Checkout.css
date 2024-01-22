@@ -15,6 +15,14 @@
 .checkout main h2 {
   text-align: center;
 }
+.checkout main #error-msg {
+  color: red;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.checkout main small {
+  color: white;
+}
 .checkout main form {
   display: flex;
   flex-direction: column;

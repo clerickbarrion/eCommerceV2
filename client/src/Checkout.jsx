@@ -87,39 +87,48 @@ export default function Checkout() {
     const deliver_date = document.getElementById('deliver_date').value
     const purchase_date = new Date()
     const address = document.getElementById('address').value
+    const country = document.getElementById('country').value
+    const email = document.getElementById('email').value
+    const error = document.getElementById('error-msg')
 
-    let data = {
-      username,
-      items,
-      total,
-      deliver_date,
-      purchase_date,
-      address,
-    }
+    if (!country,!address,!email) error.textContent = 'Enter all required fields'
+    else if (!deliver_date || (Number(new Date(deliver_date)) < Number(purchase_date) + 172800000)) error.textContent = 'Select a deliver date at least 2 days from now'
+    else if (!email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) error.textContent = "Enter a valid email"
+    else if (total === 'Total: $0.00') {error.textContent = 'No item in cart'}
+    else {
+      let data = {
+        username,
+        items,
+        total,
+        deliver_date,
+        purchase_date,
+        address,
+      }
+    
+      let options = {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(data)
+      }
+      fetch('http://localhost:4000/api/uploadHistory',options)
   
-    let options = {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(data)
+      localStorage.setItem('cart','[]')
+  
+      data = {
+        username,
+        cart: localStorage.getItem('cart')
+      }
+  
+      options = {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(data)
+      }
+  
+      fetch('http://localhost:4000/api/updateCart',options)
+  
+      window.location = `${window.location.origin}/account`
     }
-    fetch('http://localhost:4000/api/uploadHistory',options)
-
-    localStorage.setItem('cart','[]')
-
-    data = {
-      username,
-      cart: localStorage.getItem('cart')
-    }
-
-    options = {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(data)
-    }
-
-    fetch('http://localhost:4000/api/updateCart',options)
-
-    window.location = `${window.location.origin}/account`
   }
 
   return (
@@ -127,18 +136,20 @@ export default function Checkout() {
       <main>
         <section>
           <h2>Deliver Information</h2>
+          <p id='error-msg'></p>
+          <small>*indicates required</small>
           <form>
             <div>
-              <input id='country' placeholder='Country'/>
+              <input id='country' placeholder='*Country'/>
             </div>
-            <div>
+            {/* <div>
               <input  id='discount' placeholder='Discount Code'/>
+            </div> */}
+            <div>
+              <input id='email'placeholder='*Email'/>
             </div>
             <div>
-              <input placeholder='Email'/>
-            </div>
-            <div>
-              <input id="address"placeholder='Delivery Address'/>
+              <input id="address"placeholder='*Delivery Address'/>
             </div>
             <div>
               <input id='deliver_date' type='datetime-local' placeholder='Select Arrival Date'/>

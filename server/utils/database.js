@@ -1,5 +1,5 @@
 const mysql = require('mysql')
-const con = mysql.createPool({connectionLimit:40,host:"localhost",user:"root",password:"password", database: "ecommerce",debug: false})
+const con = mysql.createPool({connectionLimit:40,host:"sql5.freemysqlhosting.net",user:"sql5678167",password:"34CA5F8iiW", database: "sql5678167",debug: false})
 
 function getFish(type='',lowest='0',highest='100'){
     const range = ` WHERE price > ${lowest} AND price < ${highest}`
@@ -101,7 +101,7 @@ function updateCart(username,cart){
     return new Promise((resolve,reject)=>{
         con.getConnection((err,connection)=>{
             let sql = `
-            UPDATE Cart
+            UPDATE cart
             SET cart = '${cart}'
             WHERE username = "${username}"
             `

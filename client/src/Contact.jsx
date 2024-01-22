@@ -25,7 +25,7 @@ function Form(){
             <h1>Help Us Improve</h1>
             <fieldset>
                 <legend>Survey</legend>
-                <figure><img src={require("./images/arowana.avif")} alt="arowana"/></figure>
+                <figure><img src={require("./images/arowana.png")} alt="arowana"/></figure>
                 <p>* indicates required</p>
                 <h1 id='error-msg'></h1>
                 <div className="form-group">
